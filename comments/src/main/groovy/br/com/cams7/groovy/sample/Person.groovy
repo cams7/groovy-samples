@@ -16,4 +16,11 @@ class Person {
 	String greet(String otherPerson) {
 		"Hello ${otherPerson}"
 	}
+
+	static void main(String[] args) {
+		Person p = new Person();
+		p.setName("Java");
+		System.out.println("Name: " + p.getName());
+		System.out.println(p.greet("Groovy"));
+	}
 }
