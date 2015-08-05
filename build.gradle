@@ -1,0 +1,23 @@
+subprojects {
+	apply {
+		plugin 'groovy'
+		plugin 'eclipse'
+	}
+	
+	compileJava.options.encoding = 'UTF-8'
+	compileGroovy.options.encoding = 'UTF-8'
+	
+	sourceCompatibility = 1.7
+		
+	repositories {  
+		mavenCentral()  		
+	}
+		
+	dependencies {   
+		testCompile 'junit:junit:4.+'
+	}
+	
+	dependencies {
+		compile 'org.codehaus.groovy:groovy-all:2.4.4'
+	}
+}
