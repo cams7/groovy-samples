@@ -1,9 +1,15 @@
-package groovy.sample.numbers
+package groovy.sample.syntax
 
-class NumberTest {
+/**
+ * 1.1.5. Numbers
+ * 
+ * @author cams7
+ *
+ */
+class Numbers {
 
 	//Integral literals
-	static void integralLiterals(){
+	static integralLiterals(){
 		// primitive types
 		byte  b1 = 1
 		char  c1 = 65
@@ -60,7 +66,7 @@ class NumberTest {
 	}
 
 	//Binary literal
-	static void binaryLiteral(){
+	static binaryLiteral(){
 		int xInt = 0b10101111
 		assert xInt == 175
 
@@ -81,7 +87,7 @@ class NumberTest {
 	}
 
 	//Octal literal
-	static void octalLiteral(){
+	static octalLiteral(){
 		int xInt = 077
 		assert xInt == 63
 
@@ -102,7 +108,7 @@ class NumberTest {
 	}
 
 	//Hexadecimal literal
-	static void hexadecimalLiteral(){
+	static hexadecimalLiteral(){
 		int xInt = 0x77
 		assert xInt == 119
 
@@ -126,7 +132,7 @@ class NumberTest {
 	}
 
 	//Decimal literals
-	static void decimalLiterals(){
+	static decimalLiterals(){
 		// primitive types
 		float  f = 1.234
 		double d = 2.345
@@ -144,7 +150,7 @@ class NumberTest {
 	}
 
 	//Underscore in literals
-	static void underscoreInLiterals(){
+	static underscoreInLiterals(){
 		long creditCardNumber = 1234_5678_9012_3456L
 		long socialSecurityNumbers = 999_99_9999L
 		double monetaryAmount = 12_345_132.12
@@ -165,7 +171,7 @@ class NumberTest {
 	}
 
 	//Number type suffixes
-	static void numberTypeSuffixes(){
+	static numberTypeSuffixes(){
 		assert 42I == new Integer('42')
 		assert 42i == new Integer('42') // lowercase i more readable
 		assert 123L == new Long("123") // uppercase L more readable
@@ -182,7 +188,7 @@ class NumberTest {
 	}
 
 	//Math operations
-	static void mathOperations(){
+	static mathOperations(){
 		// base and exponent are ints and the result can be represented by an Integer
 		assert    2    **   3    instanceof Integer    //  8
 		assert   10    **   9    instanceof Integer    //  1_000_000_000
@@ -222,7 +228,7 @@ class NumberTest {
 		assert    2    **   0.1f instanceof Double     //  1.0717734636432956
 	}
 
-	static void main(String[] args) {
+	static main(args) {
 		integralLiterals()
 
 		binaryLiteral()

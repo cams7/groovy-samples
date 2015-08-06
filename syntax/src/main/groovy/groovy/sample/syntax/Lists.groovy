@@ -1,8 +1,14 @@
-package groovy.sample.lists
+package groovy.sample.syntax
 
-class ListTest {
+/**
+ * 1.1.7. Lists
+ * 
+ * @author cams7
+ *
+ */
+class Lists {
 
-	static void main(String[] args) {
+	static main(args) {
 		def numbers = [1, 2, 3]
 
 		assert numbers instanceof List

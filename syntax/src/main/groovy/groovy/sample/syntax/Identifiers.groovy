@@ -1,9 +1,15 @@
-package groovy.sample.identifiers
+package groovy.sample.syntax
 
-class QuotedIdentifiers {
+/**
+ * 1.1.3. Identifiers
+ * 
+ * @author cams7
+ *
+ */
+class Identifiers {
 
 	//Quoted identifiers
-	static void quotedIdentifiers(){
+	static quotedIdentifiers(){
 		def map = [:]
 
 		map."an identifier with a space and double quotes" = "ALLOWED"
@@ -31,7 +37,7 @@ class QuotedIdentifiers {
 	}
 
 
-	static void main(String[] args) {
+	static main(args) {
 		quotedIdentifiers()
 	}
 }

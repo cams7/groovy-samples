@@ -1,8 +1,14 @@
-package groovy.sample.arrays
+package groovy.sample.syntax
 
-class ArrayTest {
+/**
+ * 1.1.8. Arrays
+ * 
+ * @author cams7
+ *
+ */
+class Arrays {
 
-	static void main(String[] args) {
+	static main(args) {
 		String[] arrStr = ['Ananas', 'Banana', 'Kiwi']
 
 		assert arrStr instanceof String[]

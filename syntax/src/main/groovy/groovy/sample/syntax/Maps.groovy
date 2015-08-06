@@ -1,8 +1,14 @@
-package groovy.sample.maps
+package groovy.sample.syntax
 
-class MapTest {
+/**
+ * 1.1.9. Maps
+ * 
+ * @author cams7
+ *
+ */
+class Maps {
 
-	static void main(String[] args) {
+	static main(args) {
 
 		def colors = [red: '#FF0000', green: '#00FF00', blue: '#0000FF']
 
@@ -28,7 +34,7 @@ class MapTest {
 
 		assert !person.containsKey('name')
 		assert person.containsKey('key')
-		
+
 		println "map values:"
 		person.each{println it }
 

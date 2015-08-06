@@ -1,8 +1,14 @@
-package groovy.sample.booleans
+package groovy.sample.syntax
 
-class BooleanTest {
+/**
+ * 1.1.6. Booleans
+ * 
+ * @author cams7
+ *
+ */
+class Booleans {
 
-	static void main(String[] args) {
+	static main(args) {
 		def myBooleanVariable = true
 		boolean untypedBooleanVar = false
 		println "$myBooleanVariable, $untypedBooleanVar"

@@ -1,19 +1,25 @@
-package groovy.sample.strings
+package groovy.sample.syntax
 
-class StringTest {
+/**
+ * 1.1.4. Strings
+ * 
+ * @author cams7
+ *
+ */
+class Strings {
 
 	//Single quoted string
-	static void singleQuotedString() {
+	static singleQuotedString() {
 		println 'a single quoted string'
 	}
 
 	//String concatenation
-	static void stringConcatenation() {
+	static stringConcatenation() {
 		assert 'ab' == 'a' + 'b'
 	}
 
 	//Triple single quoted string
-	static void tripleSingleQuotedString() {
+	static tripleSingleQuotedString() {
 		println '''a triple single quoted string'''
 
 		def aMultilineString = '''line one
@@ -41,23 +47,23 @@ class StringTest {
 	}
 
 	//Escaping special characters
-	static void escapingSpecialCharacters() {
+	static escapingSpecialCharacters() {
 		println 'an escaped single quote: \' needs a backslash'
 		println 'an escaped escape character: \\ needs a double backslash'
 	}
 
 	//Unicode escape sequence
-	static void unicodeEscapeSequence() {
+	static unicodeEscapeSequence() {
 		println 'The Euro currency symbol: \u20AC'
 	}
 
 	//Double quoted string
-	static void doubleQuotedString() {
+	static doubleQuotedString() {
 		println "a double quoted string"
 	}
 
 	//String interpolation
-	static void stringInterpolation() {
+	static stringInterpolation() {
 		def name = 'Guillaume' // a plain string
 		def greeting = "Hello ${name}"
 
@@ -77,7 +83,7 @@ class StringTest {
 	}
 
 	//Special case of interpolating closure expressions
-	static void specialCaseOfInterpolatingClosureExpressions() {
+	static specialCaseOfInterpolatingClosureExpressions() {
 		def sParameterLessClosure = "1 + 2 == ${-> 3}"
 		assert sParameterLessClosure == '1 + 2 == 3'
 
@@ -102,7 +108,7 @@ class StringTest {
 	}
 
 	//Interoperability with Java
-	static void interoperabilityWithJava() {
+	static interoperabilityWithJava() {
 		def message = "The message is ${'hello'}"
 		assert message instanceof GString
 
@@ -114,7 +120,7 @@ class StringTest {
 	}
 
 	//GString and String hashCodes
-	static void gStringAndStringHashCodes() {
+	static gStringAndStringHashCodes() {
 		assert "one: ${1}".hashCode() != "one: 1".hashCode()
 
 		def key = "a"
@@ -129,7 +135,7 @@ class StringTest {
 	}
 
 	//Triple double quoted string
-	static void tripleDoubleQuotedString() {
+	static tripleDoubleQuotedString() {
 		def name = 'Groovy'
 		def template = """
     Dear Mr ${name},
@@ -147,7 +153,7 @@ class StringTest {
 	}
 
 	//Slashy string
-	static void slashyString() {
+	static slashyString() {
 		def fooPattern = /.*foo.*/
 		assert fooPattern == '.*foo.*'
 
@@ -169,7 +175,7 @@ class StringTest {
 	}
 
 	//Dollar slashy string
-	static void dollarSlashyString() {
+	static dollarSlashyString() {
 		def name = "Guillaume"
 		def date = "April, 1st"
 
@@ -191,7 +197,7 @@ class StringTest {
 	}
 
 	//Characters
-	static void characters(){
+	static characters(){
 		char c1 = 'A'
 		assert c1 instanceof Character
 
@@ -202,7 +208,7 @@ class StringTest {
 		assert c3 instanceof Character
 	}
 
-	static void main(String[] args) {
+	static main(args) {
 		singleQuotedString()
 
 		stringConcatenation()
